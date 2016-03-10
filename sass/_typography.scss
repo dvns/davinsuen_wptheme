@@ -1,97 +1,60 @@
+$black: #404040;
+$grey: #8F8F8F;
+$grey-light: #F7F7F7;
+$white: #FEFEFE;
+$gold: #CDBE8D;
+$gold-light: #E1DED6;
+
+
+$serif: 'Playfair Display', serif;
+$sans: 'Lato', sans serif;
+
+$ft-light: 300;
+$ft-normal: 400;
+$ft-bold: 700;
+
+$ft-base: 1.6rem;
+$ft-med: 1.8rem;
+$ft-lg: 2rem;
+$ft-xlg: 4.6rem;
+$ft-xxlg: 14.4rem;
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: $sans;
+	font-size: 16px;
+	font-size: $ft-base;
+	color: $black;
+}
+
 a {
-	color: #BA209B;
 	text-decoration: none;
-	&:hover {
-		color: #D424B1;
+}
+
+
+// ================
+// HEADER
+// ================
+
+header {
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
 	}
 }
 
-/* paragraphs */
-
-p {
-	line-height: 1.5;
-}
-
-/*blockquotes*/
-
-blockquote {
-	background: #F7F7F7;
-	margin: 0;
-	padding: 20px;
+.logoContainer {
+	text-transform: uppercase;
+	h1 {
+		color: $black;
+		font-size: $ft-med;
+	}
 	p {
-		margin-top: 0;
+		color: $gold;
 	}
-}
-
-/*tables*/
-
-table {
-	td {
-		padding: 10px;
-	}
-	tr td:first {
-		padding-right: 0;
-	}
-}
-
-/*def lists*/
-
-dt {
-	font-weight: 600;
-	padding-bottom: 5px;
-}
-
-dd {
-	padding: 10px;
-	margin-left: 10px;
-}
-
-/*lists*/
-
-ul li, ol li {
-	padding: 3px;
-}
-
-/*PRE*/
-
-pre {
-	background: #F7F7F7;
-	padding: 10px;
-	border-radius: 4px;
-	border: 1px solid #ccc;
-}
-
-
-/*
-====================================
-Global Classes / Wordpress Specific
-====================================
-*/
-
-.aligncenter {
-	text-align: center;
-	margin: 0 auto;
-}
-
-.alignleft {
-	float: left;
-}
-
-.alignright {
-	float: right;
-}
-
-img {
-	&.alignleft {
-		padding-right: 5px;
-	}
-	&.alignright {
-		padding-left: 5px;
-	}
-}
-
-.clear {
-	width: 100%;
-	float: left;
-	clear: both;
 }

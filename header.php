@@ -15,11 +15,12 @@
 
 <header>
   <div class="container">
-    <h1>
-      <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
-        <?php bloginfo( 'name' ); ?>
-      </a>
-    </h1>
+    <a href="<?php echo home_url( '/' );?>">
+      <div class="logoContainer">
+        <h1><?php bloginfo('name'); ?></h1>
+        <p><?php bloginfo('description'); ?></p>
+      </div>
+    </a>
 
     <?php wp_nav_menu( array(
       'container' => false,
