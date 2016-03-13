@@ -13,11 +13,13 @@ $ft-light: 300;
 $ft-normal: 400;
 $ft-bold: 700;
 
+$ft-xsmall: 1.2rem;
+$ft-small: 1.4rem;
 $ft-base: 1.6rem;
 $ft-med: 1.8rem;
 $ft-lg: 2rem;
 $ft-xlg: 4.6rem;
-$ft-xxlg: 14.4rem;
+$ft-xxlg: 9.6rem;
 
 html {
 	font-size: 62.5%;
@@ -27,24 +29,41 @@ body {
 	font-family: $sans;
 	font-size: 16px;
 	font-size: $ft-base;
+	font-weight: $ft-normal;
 	color: $black;
+}
+
+p {
+	line-height: 2;
 }
 
 a {
 	text-decoration: none;
 }
 
+h2, h3 {
+	font-family: $serif;
+	font-weight: $ft-normal;
+	font-size: $ft-xlg;
+	margin: 0;
+	padding: 0;
+}
 
-// ================
+.sectionTitle h2 {
+	font-size: $ft-xxlg;
+	color: $gold-light;
+}
+
+
+// ===========================
 // HEADER
-// ================
+// ===========================
 
-header {
-
-	ul {
-		list-style: none;
-		margin: 0;
-		padding: 0;
+nav a {
+	font-family: $serif;
+	color: $grey;
+	&:hover {
+		color: $gold;
 	}
 }
 
@@ -52,9 +71,24 @@ header {
 	text-transform: uppercase;
 	h1 {
 		color: $black;
-		font-size: $ft-med;
+		font-size: $ft-base;
+		margin: 0;
+		padding: 0;
 	}
 	p {
 		color: $gold;
+		font-size: $ft-small;
+		margin: 0;
+		padding: 0;
 	}
+}
+
+ul.portfolioSkills {
+	color: $grey;
+}
+
+.liveButton {
+	font-family: $serif;
+	font-size: $ft-lg;
+	color: $white;
 }

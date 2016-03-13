@@ -12,20 +12,31 @@
 
 
 <body <?php body_class(); ?>>
-
+<div class="sectionTitle">
+  <h2></h2> 
+</div>
 <header>
-  <div class="container">
     <a href="<?php echo home_url( '/' );?>">
       <div class="logoContainer">
         <h1><?php bloginfo('name'); ?></h1>
         <p><?php bloginfo('description'); ?></p>
       </div>
     </a>
-
+  
+  <nav class="mainNav">
     <?php wp_nav_menu( array(
       'container' => false,
       'theme_location' => 'primary'
     )); ?>
-  </div> <!-- /.container -->
+  </nav>
+
+  <nav class="socialNav">
+    <?php wp_nav_menu(array(
+      'container' => false,
+      'theme_location' => 'social'
+    )); ?>
+  </nav>
+
+  
 </header><!--/.header-->
 

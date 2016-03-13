@@ -13,39 +13,171 @@
 @import 'sidebar';
 @import 'comments';
 @import 'footer';
+
+@import 'bourbon';
+@import 'neat';
+
+
+$max-width: em(980) !global;
+
+
 /*
 ====================================
 Default Styling
 ====================================
 */
 
+
 img {
 	max-width: 100%;
+	display: block;
 }
 
-body {
-	color: #333;
+.sectionContainer {
+	@include outer-container;
 }
 
-.container {
-	max-width: 1200px;
-	margin: 0 auto;
+.contentContainer {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	background-image: linear-gradient(to left, $grey-light 29%, $white 29%);
 }
 
-.content {
-	float: left;
-	width: 65%;
-	margin-right: 5%;
+section {
+	background-image: linear-gradient(to left, $grey-light 29%, $white 29%);
 }
 
-.full {
+// ===========================
+// HEADER SECTION
+// ===========================
+
+header {
+	position: fixed;
 	width: 100%;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+nav.mainNav {
+
+}
+
+nav.socialNav {
+
 }
 
 
 
+// ===========================
+// PORTFOLIO SECTION
+// ===========================
+
+
+.portfolioText {
+	@include span-columns(5);
+}
+
+.portfolioImage {
+	@include span-columns(7);
+	z-index: 10;
+
+	img {
+		margin: 0 auto;
+		width: 100%;
+	}
+}
+
+ul.portfolioSkills {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+
+	li {
+		margin-right: 20px;
+	}
+}
+
+.liveButton {
+	text-align: center;
+	background: $gold;
+	padding: 5px 10px;
+}
+
+.sectionTitle {
+	width: 100px;
+	height: 100%;
+	position: fixed;
+	right: 0;
+	top: 0;
+
+	h2 {
+		text-transform: capitalize;
+		transform: rotate(-90deg);
+		width: 100%;
+		position: absolute;
+		right: 25%;
+		bottom: 0;
+	}
+}
+
+
+// ===========================
+// ABOUT SECTION
+// ===========================
 
 
 
 
+// ===========================
+// CONTACT SECTION
+// ===========================
 
+
+.contactForm {
+	padding: 20px;
+	border: 1px solid $gold-light;
+	background: $white;
+	position: relative;
+
+	input[type=text], input[type=email], textarea {
+		outline: none;
+		border-radius: 0;
+		border: none;
+		border-bottom: 1px solid $gold-light;
+		color: $black;
+		margin-bottom: 5px;
+		padding: 5px;
+		resize: none;
+	}
+
+	textarea {
+		max-height: 100px;
+	}
+
+	input[type=submit] {
+		width: 100%;
+		outline: none;
+		border: none;
+		border-radius: 0;
+		background: $gold;
+		color: $white;
+		font-family: $serif;
+		padding: 10px 0;
+	}
+
+	.wpcf7-not-valid-tip, .wpcf7-validation-errors {
+		display: none;
+	}
+
+}
