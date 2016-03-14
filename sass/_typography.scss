@@ -2,7 +2,7 @@ $black: #404040;
 $grey: #8F8F8F;
 $grey-light: #F7F7F7;
 $white: #FEFEFE;
-$gold: #CDBE8D;
+$gold: #D7CCA7;
 $gold-light: #E1DED6;
 
 
@@ -18,7 +18,7 @@ $ft-small: 1.4rem;
 $ft-base: 1.6rem;
 $ft-med: 1.8rem;
 $ft-lg: 2rem;
-$ft-xlg: 4.6rem;
+$ft-xlg: 4.2rem;
 $ft-xxlg: 9.6rem;
 
 html {
@@ -78,13 +78,20 @@ nav a {
 	p {
 		color: $gold;
 		font-size: $ft-small;
+		font-weight: $ft-normal;
 		margin: 0;
 		padding: 0;
 	}
 }
 
+// ===========================
+// PORTFOLIO SECTION
+// ===========================
+
+
 ul.portfolioSkills {
 	color: $grey;
+	text-transform: uppercase;
 }
 
 .liveButton {

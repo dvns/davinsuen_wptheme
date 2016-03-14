@@ -13,12 +13,11 @@ $(function(){
 
 			if (currentPosition >= target) {
 				$('.sectionTitle h2').text(id);
-			}
+				$('.mainNav li a').removeClass('active');
+				$('.mainNav li a[href=#' + id + ']').addClass('active');
+			};
 		});
-		
-
 	});
-
 
 });
 

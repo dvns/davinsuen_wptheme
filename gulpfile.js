@@ -10,7 +10,6 @@ var gulp   = require('gulp'),
 		sass = require('gulp-sass'),
 		sourcemaps = require('gulp-sourcemaps'),
 		uglify = require('gulp-uglify');
-		neat = require('node-neat').includePaths;
 
 gulp.task('bs', function() {
 	browserSync.init({
@@ -24,9 +23,7 @@ gulp.task('styles', function() {
 		  errorHandler: notify.onError("Error: <%= error.message %>")
 		}))
 		.pipe(sourcemaps.init())
-		.pipe(sass({
-			includePaths: ['styles'].concat(neat)
-			}))
+		.pipe(sass())
 		.pipe(minifyCSS())
 		.pipe(concat('style.css'))
 		.pipe(autoprefixer('last 5 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))

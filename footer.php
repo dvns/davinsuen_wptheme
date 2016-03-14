@@ -1,7 +1,7 @@
 <footer>
-  <div class="container">
-    <p>&copy; HackerYou <?php echo date('Y'); ?></p>
-  </div>
+	<div class="contentContainer">
+    <p>&copy; Designed and Coded by Davin Suen <?php echo date('Y'); ?></p>
+   </div>
 </footer>
 
 <script>
