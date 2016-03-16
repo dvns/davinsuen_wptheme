@@ -1,15 +1,16 @@
 <?php get_header();  ?>
 
-	<section id="">
+	<section id="home">
 			<div class="contentContainer">
 				<div class="homeText">
-					<h3><?php the_title(); ?></h3>
+					<h1><?php the_title(); ?></h1>
 					<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 						<?php the_content(); ?>
 					<?php endwhile; ?>
 				</div>
 			</div> <!-- /contentContainer -->
-	</section> <!-- /section.about -->
+	</section> <!-- /section.home -->
+
 
 	<section id="portfolio">
 			<?php $portfolioQuery = new WP_Query(
@@ -72,7 +73,7 @@
 						<h3><?php the_field('contact_title') ?></h3>
 						<p><?php the_field('contact_text') ?></p>
 					</div> <!-- /.contactText -->
-					
+
 					<div class="contactForm">
 						<?php echo do_shortcode('[contact-form-7 id="37" title="Contact Form"]') ?>
 					</div> <!-- .contactForm -->

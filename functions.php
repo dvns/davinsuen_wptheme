@@ -68,6 +68,22 @@ function hackeryou_scripts() {
   );
 
   wp_enqueue_script(
+  	'smoothScroll',
+  	"http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.7.2/jquery.smooth-scroll.min.js",
+  	array( 'jquery' ), //dependencies
+  	null, //version number
+  	true //load in footer
+  );
+
+  wp_enqueue_script(
+    'fullpage', //handle
+    "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . '://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.8/jquery.fullPage.min.js', //source
+    array( 'jquery' ), //dependencies
+    null, // version number
+    true //load in footer
+  );
+
+  wp_enqueue_script(
     'plugins', //handle
     get_template_directory_uri() . '/js/plugins.js', //source
     false, //dependencies
@@ -83,13 +99,6 @@ function hackeryou_scripts() {
     true //load in footer
   );
 
-  wp_enqueue_script(
-    'fullPageScroll', //handle
-    "https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.8/jquery.fullPage.min.js", //source
-    array( 'jquery', 'scripts'), //dependencies
-    null, // version number
-    true //load in footer
-  );
 }
 
 add_action( 'wp_enqueue_scripts', 'hackeryou_scripts');

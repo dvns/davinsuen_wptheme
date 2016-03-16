@@ -1,10 +1,10 @@
 /*
-* Theme Name: HackerYou Starter Theme
-* Theme URI: http://hackeryou.com;
-* Description: Starter theme for building any website. Created by HackerYou. * Rename this to your own theme page.
+* Theme Name: Davin Suen WP Theme
+* Theme URI: http://davinsuen.com;
+* Description: Personal Portfolio Theme;
 * Version: 1.0
 * Author: HackerYou
-* Author URI: http://hackeryou.com
+* Author URI: http://davinsuen.com
 */
 
 @import 'normalize';
@@ -13,7 +13,6 @@
 @import 'sidebar';
 @import 'comments';
 @import 'footer';
-
 
 /*
 ====================================
@@ -28,18 +27,18 @@ img {
 }
 
 .contentContainer {
-	max-width: 980px;
+	max-width: 960px;
 	height: 100vh;
 	margin: 0 auto;
-	padding: 0 20px;
-	background-image: linear-gradient(to left, $grey-light 28.5%, $white 28.5%);
+	padding: 0 10px;
+	background-image: linear-gradient(to left, $grey-xlight 25.5%, $white 25.5%);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
 
 section, footer {
-	background-image: linear-gradient(to left, $grey-light 28.5%, $white 28.5%);
+	background-image: linear-gradient(to left, $grey-xlight 25.5%, $white 25.5%);
 }
 
 // ===========================
@@ -48,12 +47,17 @@ section, footer {
 
 header {
 	position: fixed;
+	width: 150px;
 	height: 100%;
+	z-index: $z-max;
 	padding: 20px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+}
 
+.logoContainer {
+	// display: none;
 }
 
 nav ul {
@@ -62,34 +66,62 @@ nav ul {
 	padding: 0;
 }
 
-nav.mainNav {
-	
+.mainNav {
+
+	ul {
+		display: flex;
+		flex-direction: column;
+	}
+
 	li {
 		margin: 10px 0;
 	}
 
 	a {
-		transition: all 0.35s;
+		transition: all 0.2s;
+		position: relative;
+		&:after {
+			transition: all 0.2s;
+			content: '';
+			height: 1px;
+			width: 0%;
+			position: absolute;
+			background: $gold;
+			bottom: 0;
+			left: 0;
+		}
 	}
 
-	a.active {
+	li.active a {
 		color: $gold;
-		position: relative;
-
 		&:after {
 			content: '';
-			height: 2px;
+			height: 1px;
 			width: 100%;
-			background: $gold;
 			position: absolute;
+			background: $gold;
 			bottom: 0;
 			left: 0;
 		}
 	}
 }
 
-nav.socialNav {
+.socialNav {
+	ul {
+		display: flex;
+	}
 
+	li {
+		padding-right: 20px;
+	}
+}
+
+// ===========================
+// HERO SECTION
+// ===========================
+
+.homeText {
+	
 }
 
 
@@ -100,12 +132,13 @@ nav.socialNav {
 
 .portfolioItem {
 	flex-direction: row;
+	justify-content: space-between;
 	align-items: center;
 }
 
 .portfolioText {
 	width: 45%;
-	z-index: 10;
+	z-index: $z-min;
 
 	& > * {
 		margin-bottom: 20px;
@@ -113,8 +146,7 @@ nav.socialNav {
 }
 
 .portfolioImage {
-	padding-left: 40px;
-	width: 55%;
+	width: 46%;
 	z-index: 10;
 
 	img {
@@ -137,8 +169,10 @@ ul.portfolioSkills {
 .liveButton {
 	display: inline-block;
 	text-align: center;
+	padding: 10px 15px;
 	background: $gold;
-	padding: 5px 10px;
+	color: $white;
+	transition: all 0.35s;
 }
 
 .sectionTitle {
@@ -240,7 +274,6 @@ ul.portfolioSkills {
 		padding: 0;
 		margin: 0;
 	}
-
 }
 
 // ===========================
@@ -265,51 +298,4 @@ footer .contentContainer {
 // FOOTER SECTION
 // ===========================
 
-@media (max-width: 480px) {
-
-	h2 {
-		// display: none;
-		opacity: 0.5;
-	}
-
-	h3 {
-		font-size: $ft-lg * 2;
-	}
-
-	.contentContainer {
-		height: 100%;
-		padding-bottom: 100px;
-	}
-
-	.portfolioItem {
-		flex-direction: column;
-		height: 100%;
-		padding-bottom: 100px;
-
-		& > * {
-			width: 100%;
-		}
-	}
-
-	.portfolioText {
-		order: 1;
-	}
-
-	.portfolioImage {
-		padding: 0;
-	}
-
-	.liveButton {
-		padding: 10px;
-		width: 100%;
-		box-shadow: 1px 1px 5px 0 $gold-light;
-	}
-
-	.aboutMe, .contact {
-		flex-direction: column;
-
-		& > * {
-			width: 100%;
-		}
-	}
-}
+@import 'responsive';

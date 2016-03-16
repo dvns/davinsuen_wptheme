@@ -1,6 +1,7 @@
 $black: #404040;
-$grey: #8F8F8F;
-$grey-light: #F7F7F7;
+$grey: #A4A4A4;
+$grey-light: #E5E5E5;
+$grey-xlight: #F7F7F7;
 $white: #FEFEFE;
 $gold: #D7CCA7;
 $gold-light: #E1DED6;
@@ -18,8 +19,14 @@ $ft-small: 1.4rem;
 $ft-base: 1.6rem;
 $ft-med: 1.8rem;
 $ft-lg: 2rem;
-$ft-xlg: 4.2rem;
+$ft-xlg: 4rem;
 $ft-xxlg: 9.6rem;
+
+$z-min: 0;
+$z-1: 10;
+$z-2: 20;
+$z-3: 30;
+$z-max: 99;
 
 html {
 	font-size: 62.5%;
@@ -72,6 +79,7 @@ nav a {
 	h1 {
 		color: $black;
 		font-size: $ft-base;
+		font-weight: $ft-normal; 
 		margin: 0;
 		padding: 0;
 	}
@@ -85,17 +93,48 @@ nav a {
 }
 
 // ===========================
+// HERO SECTION
+// ===========================
+
+.homeText {
+	text-transform: uppercase;
+
+	h1 {
+		font-size: $ft-xlg * 1.5;
+		font-weight: $ft-normal;
+		margin: 0;
+		padding: 0;
+	}
+
+	p {
+		font-size: $ft-lg;
+		color: $gold;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+
+// ===========================
 // PORTFOLIO SECTION
 // ===========================
 
+.portfolioText p a {
+	text-decoration: underline;
+	color: $black;
+}
 
 ul.portfolioSkills {
 	color: $grey;
 	text-transform: uppercase;
+
+	li {
+		font-size: $ft-small;
+	}
 }
 
 .liveButton {
 	font-family: $serif;
-	font-size: $ft-lg;
-	color: $white;
+	font-size: $ft-med;
+	color: $gold;
 }

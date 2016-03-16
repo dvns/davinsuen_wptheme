@@ -12,15 +12,16 @@ $(function(){
 			target -= 500;
 
 			if (currentPosition >= target) {
-				$('.sectionTitle h2').text(id);
-				$('.mainNav li a').removeClass('active');
-				$('.mainNav li a[href=#' + id + ']').addClass('active');
+				$('.mainNav li').removeClass('active');
+				$('.mainNav li a[href=#' + id + ']').parent().addClass('active');
+
+				if(id !== 'home') {
+					$('.sectionTitle h2').text(id);
+				}
+				else {
+					$('.sectionTitle h2').empty();
+				}
 			};
 		});
 	});
-
 });
-
-// windowscroll listen for the offset of specific elements
-// listen for when about div comes into view - change h2
-// jquery.offset

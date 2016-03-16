@@ -1,0 +1,104 @@
+// ===========================
+// MOBILE RESPONSIVE
+// ===========================
+
+@media (max-width:1279px) {
+	header {
+		width: 100%;
+		height: auto;
+		// background: $black;
+		opacity: 0.97;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	.mainNav {
+		ul {
+			flex-direction: row;
+
+			li {
+				margin: 0;
+				padding: 0;
+				padding-left: 20px;
+			}
+		}
+	}
+
+	.socialNav {
+		display: none;
+	}
+}
+
+@media (max-width: 768px) {
+	.portfolioText, .portfolioImage {
+		width: 48%;
+	}
+}
+
+@media (max-width: 660px) {
+
+	#home {
+		height: 100vh;
+
+		.contentContainer {
+			padding-bottom: 0;
+		}
+	}
+	
+	.sectionTitle h2 {
+		display: none;
+	}
+
+	header {
+		background: $white;
+		padding: 20px 10px;
+		box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+	}
+
+	.contentContainer {
+		flex-direction: column;
+		height: 100%;
+		padding-bottom: 100px;
+	}
+
+	.portfolioText {
+		width: 100%;
+		order: 1;
+	}
+
+	.portfolioImage {
+		width: 75%;
+		padding: 0;
+		margin-bottom: 20px;
+	}
+
+	.aboutMeImage {
+		width: 45%;
+	}
+}
+
+@media (max-width:480px) {
+
+	.mainNav ul {
+		li {
+			padding-left: 10px;
+		}
+	}
+
+	.portfolioImage {
+		width: 100%;
+	}
+
+	.liveButton {
+		padding: 10px;
+		width: 100%;
+	}
+
+	.aboutMe, .contact {
+		flex-direction: column;
+
+		& > * {
+			width: 100%;
+		}
+	}
+}
